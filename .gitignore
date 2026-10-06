@@ -1,0 +1,15 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+coverage/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Runtime data and temporary uploads
+data/*.ndjson
+uploads/temp/
