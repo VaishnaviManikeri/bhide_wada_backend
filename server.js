@@ -25,6 +25,11 @@ app.use(cors({
 }))
 app.use(express.json({limit:'1mb'}))
 
+app.get('/',(_req,res)=>res.json({
+  service:'Bhide Wada API',
+  status:'ok',
+  health:'/api/health'
+}))
 app.get('/api/health',(_req,res)=>res.json({status:'ok'}))
 app.use('/api/admin',adminAuthRoutes)
 app.use('/api',contentRoutes)
